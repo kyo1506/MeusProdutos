@@ -11,6 +11,8 @@ namespace DevIO.Business.Models.Fornecedores
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+
+        /* EF Relations */
         public Fornecedor Fornecedor { get; set; }
     }
 }

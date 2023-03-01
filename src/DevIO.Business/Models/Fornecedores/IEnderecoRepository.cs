@@ -1,9 +1,6 @@
-﻿using DevIO.Business.Core.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
+using DevIO.Business.Core.Data;
 
 namespace DevIO.Business.Models.Fornecedores
 {

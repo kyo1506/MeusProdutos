@@ -8,6 +8,7 @@ namespace DevIO.Business.Core.Models
         {
             Id = Guid.NewGuid();
         }
+
         public Guid Id { get; set; }
     }
 }

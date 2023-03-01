@@ -1,8 +1,8 @@
-﻿using DevIO.Business.Core.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using DevIO.Business.Core.Models;
 
 namespace DevIO.Business.Core.Data
 {

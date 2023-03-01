@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A30BCD9-F99E-4EAD-AA2C-24F464CB9211}</ProjectGuid>
+    <ProjectGuid>{33887380-23CC-4117-8FCA-8F34B6FA3DC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DevIO.Infra</RootNamespace>
@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevIO.Business\DevIO.Business.csproj">
-      <Project>{2587f6ac-4cca-4784-a379-924d05affc84}</Project>
+      <Project>{7c19cbf7-cd31-48bd-b370-8f4771574df6}</Project>
       <Name>DevIO.Business</Name>
     </ProjectReference>
   </ItemGroup>

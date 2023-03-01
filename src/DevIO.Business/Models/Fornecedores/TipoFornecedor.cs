@@ -1,7 +1,8 @@
 ﻿namespace DevIO.Business.Models.Fornecedores
 {
-    public enum TipoFornecedor { 
+    public enum TipoFornecedor
+    {
         PessoaFisica = 1,
-        PessoaJuridica = 2
+        PessoaJuridica
     }
 }

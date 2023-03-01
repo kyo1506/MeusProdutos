@@ -1,26 +1,28 @@
-﻿using DevIO.Business.Models.Produtos;
-using System;
-using System.Data.Entity;
+﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
+using DevIO.Business.Models.Produtos;
+using DevIO.Infra.Data.Context;
 
 namespace DevIO.Infra.Data.Repository
 {
     public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     {
-        public async Task<Produto> ObterProdutoForncedor(Guid id)
-        {
-            return await _meuDbContext.Produtos.AsNoTracking()
-                .Include(p => p.Fornecedor)
-                .FirstOrDefaultAsync(p => p.Id == id);
+        public ProdutoRepository(MeuDbContext context) : base(context) { }
 
+        public async Task<Produto> ObterProdutoFornecedor(Guid id)
+        {
+            return await Db.Produtos.AsNoTracking()
+                .Include(f => f.Fornecedor)
+                .FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<IEnumerable<Produto>> ObterProdutosFornecedores()
         {
-            return await _meuDbContext.Produtos.AsNoTracking()
-                .Include(p => p.Fornecedor)
+            return await Db.Produtos.AsNoTracking()
+                .Include(f => f.Fornecedor)
                 .OrderBy(p => p.Nome).ToListAsync();
         }
 

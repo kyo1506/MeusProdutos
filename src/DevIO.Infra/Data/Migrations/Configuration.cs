@@ -1,8 +1,8 @@
-﻿using System.Data.Entity.Migrations;
-
+﻿using DevIO.Infra.Data.Context;
+using System.Data.Entity.Migrations;
 namespace DevIO.Infra.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<Data.Context.MeuDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MeuDbContext>
     {
         public Configuration()
         {

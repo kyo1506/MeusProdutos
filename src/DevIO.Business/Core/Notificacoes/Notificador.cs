@@ -22,7 +22,7 @@ namespace DevIO.Business.Core.Notificacoes
             return _notificacoes;
         }
 
-        public bool TempNotificacao()
+        public bool TemNotificacao()
         {
             return _notificacoes.Any();
         }

@@ -1,6 +1,6 @@
-﻿using DevIO.Business.Core.Models;
+﻿using System;
+using DevIO.Business.Core.Models;
 using DevIO.Business.Models.Fornecedores;
-using System;
 
 namespace DevIO.Business.Models.Produtos
 {
@@ -13,6 +13,8 @@ namespace DevIO.Business.Models.Produtos
         public decimal Valor { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
+
+        /* EF Relations */
         public Fornecedor Fornecedor { get; set; }
     }
 }

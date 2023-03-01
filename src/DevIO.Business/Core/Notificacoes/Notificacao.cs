@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevIO.Business.Core.Notificacoes
+﻿namespace DevIO.Business.Core.Notificacoes
 {
     public class Notificacao
     {
@@ -12,6 +6,7 @@ namespace DevIO.Business.Core.Notificacoes
         {
             Mensagem = mensagem;
         }
-        public string Mensagem { get; set; }
+
+        public string Mensagem { get; }
     }
 }

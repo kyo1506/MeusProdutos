@@ -1,7 +1,7 @@
-﻿using DevIO.Business.Core.Models;
+﻿using System.Collections.Generic;
+using DevIO.Business.Core.Models;
+using DevIO.Business.Models.Fornecedores.Validations;
 using DevIO.Business.Models.Produtos;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace DevIO.Business.Models.Fornecedores
 {
@@ -12,6 +12,9 @@ namespace DevIO.Business.Models.Fornecedores
         public TipoFornecedor TipoFornecedor { get; set; }
         public Endereco Endereco { get; set; }
         public bool Ativo { get; set; }
+
+        /* EF Relations */
         public ICollection<Produto> Produtos { get; set; }
+
     }
 }

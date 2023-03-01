@@ -1,5 +1,5 @@
-﻿using DevIO.Business.Models.Fornecedores;
-using System.Data.Entity.ModelConfiguration;
+﻿using System.Data.Entity.ModelConfiguration;
+using DevIO.Business.Models.Fornecedores;
 
 namespace DevIO.Infra.Data.Mappings
 {
@@ -7,35 +7,32 @@ namespace DevIO.Infra.Data.Mappings
     {
         public EnderecoConfig()
         {
-            HasKey(x => x.Id);
+            HasKey(p => p.Id);
 
-            Property(p => p.Logradouro)
+            Property(c => c.Logradouro)
                 .IsRequired()
                 .HasMaxLength(200);
 
-            Property(p => p.Numero)
+            Property(c => c.Numero)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            Property(p => p.Cep)
+            Property(c => c.Cep)
                 .IsRequired()
                 .HasMaxLength(8)
                 .IsFixedLength();
 
-            Property(p => p.Complemento)
+            Property(c => c.Complemento)
                 .HasMaxLength(250);
 
-            Property(p => p.Bairro)
-                .IsRequired()
-                .HasMaxLength(100);
+            Property(c => c.Bairro)
+                .IsRequired();
 
-            Property(p => p.Cidade)
-                .IsRequired()
-                .HasMaxLength(100);
+            Property(c => c.Cidade)
+                .IsRequired();
 
-            Property(p => p.Estado)
-                .IsRequired()
-                .HasMaxLength(100);
+            Property(c => c.Estado)
+                .IsRequired();
 
             ToTable("Enderecos");
         }
